@@ -1,0 +1,14 @@
+<template>
+    <lightning-card title="PendingApprovals" icon-name="custom:custom12">
+        <div class="slds-m-around_medium">
+            <p>Hello, {user}!</p>
+            <template if:true={plural}>
+                <p>You have {approvalCount} items to approve today!</p>
+            </template>
+            <template if:false={plural}>
+                <p>You have {approvalCount} item to approve today!</p>
+            </template>
+            <lightning-button variant="approvals" label="Go to approvals page" title="approvals" onclick={handleClick} class="slds-m-left_x-small"></lightning-button>
+        </div>
+    </lightning-card>
+</template>
